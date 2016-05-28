@@ -1,0 +1,19 @@
+--TEST--
+const operator
+--TEMPLATE--
+{{ obj#ABC_DEF }}
+--DATA--
+class A {
+    const ABC_DEF = 'WORKS';
+}
+return [ 'obj' => new A() ];
+--EXPECT--
+WORKS
+--DATA--
+class B {
+    const ABC_DEF = 'WORKS';
+}
+class C extends B {}
+return [ 'obj' => new C() ];
+--EXPECT--
+WORKS

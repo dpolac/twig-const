@@ -1,0 +1,34 @@
+{
+    "name": "dpolac/twig-const",
+    "type": "library",
+    "description": "Twig operator to access class constants",
+    "keywords": [
+        "twig",
+        "const",
+        "operator",
+        "constants"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Damian Polac",
+            "email": "damian.polac.111@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^5.4 || ^7.0",
+        "twig/twig": "^1.0"
+    },
+    "reguire-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DPolac\\TwigConstOperator\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}

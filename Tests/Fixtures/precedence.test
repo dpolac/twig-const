@@ -1,0 +1,15 @@
+--TEST--
+precedence
+--TEMPLATE--
+{{ object#CLASS_CONSTANT + 12 }}
+{{ object#CLASS_CONSTANT ~ 12 }}
+{{ - object#CLASS_CONSTANT }}
+--DATA--
+class simple_class {
+    const CLASS_CONSTANT = 10;
+}
+return [ 'object' => new simple_class() ];
+--EXPECT--
+22
+1012
+-10

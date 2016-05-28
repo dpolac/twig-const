@@ -1,0 +1,13 @@
+--TEST--
+different operator
+--TEMPLATE--
+{{ obj:::FOO }}
+{{ obj const FOO }}
+--DATA--
+class F {
+    const FOO = 'WORKS';
+}
+return [ 'obj' => new F() ];
+--EXPECT--
+WORKS
+WORKS
